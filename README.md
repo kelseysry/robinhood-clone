@@ -175,14 +175,15 @@ git init
 rm -r .git/
 ```
 
-Reinitialize git in your local repo if you haven’t already
-git remote add origin <your_repo_here>
-Add your project repo as the origin fork
-git checkout -b main
-Checkout a new branch called main
-git add .
-Add all the files to the staging area
-git commit -m “first commit”
-Commit all the files to your branch
-git push -u origin main
-Push to main!
+# When add new tables to db
+1. create model
+2. import model into models/__init__.py
+3. create seed file - so this is how you seed it
+4. add the seed_stocks() and undo_stocks() function calls to the app/seeds/__init__.py, don't forget to also import the functions first
+5. after create model make to unseed table first so easier to reseed
+6. run `flask db migrate -m "add stocks model"`
+7. run `flask db upgrade`
+
+
+# Resource for models db.column type
+https://docs.sqlalchemy.org/en/14/core/type_basics.html#sqlalchemy.types.Text
