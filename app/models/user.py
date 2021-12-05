@@ -1,6 +1,8 @@
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
+from sqlalchemy.orm import relationship
+
 # UserMixin allows us to use user auth on user model
 # werkzeug.security  debugger and hash password
 
@@ -15,7 +17,14 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
     buying_power = db.Column(db.Float)
-    bank_id = db.Column(db.Integer, primary_key=True)
+
+    #one user can have many bank accounts
+    bank_id = db.Column(db.Integer, db.ForeignKey("banks.id"), nullable=True)
+
+    bank = db.relationship("Bank", back_populates="users")
+
+    # a user has 1 portfolio
+    portfolios = db.relationship("Portfolio", back_populates="user")
 
     @property
     def password(self): # getter
