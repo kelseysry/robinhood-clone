@@ -26,7 +26,7 @@ class Stock(db.Model):
   market_price = db.Column(db.Float, nullable=False)
 
   # watch list can have many stocks
-  # watchlists = db.relationship("WatchList", back_populates="stocks")
+  watchlists = db.relationship("WatchList", back_populates="stocks")
 
   # 1 fill can have 1 type of stock
   fill = db.relationship("Fill", back_populates="stock")
