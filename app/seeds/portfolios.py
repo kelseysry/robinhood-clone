@@ -29,5 +29,5 @@ def seed_portfolios():
 
 
 def undo_portfolios():
-    db.session.execute('TRUNCATE portfolios RESTART IDENTITY CASCADE;') # drop all users in db, included ones you submitted via form
+    db.session.execute('TRUNCATE portfolios RESTART IDENTITY CASCADE;') 
     db.session.commit()

@@ -10,3 +10,7 @@ class Portfolio(db.Model):
 
   # a user has 1 portfolio
   user = db.relationship("User", back_populates="portfolios", uselist=False)
+
+  fills = db.relationship("Fill", back_populates="portfolio")
+
+  

@@ -26,6 +26,8 @@ class User(db.Model, UserMixin):
     # a user has 1 portfolio
     portfolios = db.relationship("Portfolio", back_populates="user")
 
+    # watchlist = db.relationship("WatchList", back_populates="user")
+
     @property
     def password(self): # getter
         return self.hashed_password
