@@ -9,4 +9,4 @@ class Bank(db.Model):
   bank_name = db.Column(db.String(20), nullable=False, unique=True)
 
   # 1 bank can have many users
-  users = db.relationship("User", back_populates="bank")
+  portfolio = db.relationship("Portfolio", back_populates="bank")

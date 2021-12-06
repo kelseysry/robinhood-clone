@@ -2,9 +2,9 @@ from app.models import db, Fill
 
 def seed_fills():
     fill1 = Fill(
-        portfolio_id=1, stock_id=7, shares=2)
+        portfolio_id=1, stock_id=1, shares=2)
     fill2 = Fill(
-        portfolio_id=2, stock_id=8, shares=3)
+        portfolio_id=2, stock_id=2, shares=3)
 
     db.session.add(fill1)
     db.session.add(fill2)

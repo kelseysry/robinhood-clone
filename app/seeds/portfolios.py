@@ -2,11 +2,11 @@ from app.models import db, Portfolio
 
 def seed_portfolios():
     portfolio1 = Portfolio(
-        userId=1)
+        userId=1, buying_power=10000, bank_id=5)
     portfolio2 = Portfolio(
-        userId=2)
+        userId=2, buying_power=3000, bank_id=1)
     portfolio3 = Portfolio(
-        userId=3)
+        userId=3, buying_power=5000, bank_id=3)
     # portfolio4 = Portfolio(
     #     userId=4)
     # portfolio5 = Portfolio(
@@ -29,5 +29,5 @@ def seed_portfolios():
 
 
 def undo_portfolios():
-    db.session.execute('TRUNCATE portfolios RESTART IDENTITY CASCADE;') 
+    db.session.execute('TRUNCATE portfolios RESTART IDENTITY CASCADE;')
     db.session.commit()

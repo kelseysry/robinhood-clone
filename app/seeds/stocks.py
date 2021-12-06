@@ -21,7 +21,7 @@ def seed_stocks():
     volume='30.77M',
     week52_high=1243.49,
     week52_low=539.49,
-    news_id=2,
+    news_id=1,
     market_price=1008.00
   )
 
@@ -44,7 +44,7 @@ def seed_stocks():
     volume='19.17M',
     week52_high=289.23,
     week52_low=174.34,
-    news_id=2,
+    news_id=1,
     market_price=181.15
         )
 

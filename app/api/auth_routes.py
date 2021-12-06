@@ -66,7 +66,9 @@ def sign_up():
         user = User(
             username=form.data['username'],
             email=form.data['email'],
-            password=form.data['password']
+            password=form.data['password'],
+            first_name=form.data['first_name'],
+            last_name=form.data['last_name']
         )
         db.session.add(user)
         db.session.commit()
@@ -74,7 +76,7 @@ def sign_up():
         return user.to_dict()
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
-# useful if a user is trying to edit something they're not supposed to 
+# useful if a user is trying to edit something they're not supposed to
 @auth_routes.route('/unauthorized')
 def unauthorized():
     """

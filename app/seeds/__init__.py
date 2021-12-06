@@ -21,9 +21,9 @@ def seed():
     # seed_banks()
     # seed_portfolios()
     # seed_watchlists()
-    # seed_fills()
+    seed_fills()
     # seed_news()
-    seed_portfolio_snaps()
+    # seed_portfolio_snaps()
 
 
 
@@ -36,6 +36,6 @@ def undo():
     # undo_banks()
     # undo_portfolios()
     # undo_watchlists()
-    # undo_fills()
+    undo_fills()
     # undo_news()
-    undo_portfolio_snaps()
+    # undo_portfolio_snaps()

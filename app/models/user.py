@@ -16,12 +16,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
-    buying_power = db.Column(db.Float)
 
-    #one user can have many bank accounts
-    bank_id = db.Column(db.Integer, db.ForeignKey("banks.id"), nullable=True)
-
-    bank = db.relationship("Bank", back_populates="users")
 
     # a user has 1 portfolio
     portfolios = db.relationship("Portfolio", back_populates="user")
