@@ -16,14 +16,14 @@ seed_commands = AppGroup('seed')
 # Creates the `flask seed all` command
 @seed_commands.command('all')
 def seed():
-    # seed_users() # look in /seeds/users.py to see seed_users() function
-    # seed_stocks()
-    # seed_banks()
-    # seed_portfolios()
-    # seed_watchlists()
+    seed_banks()
+    seed_users() # look in /seeds/users.py to see seed_users() function
+    seed_news()
+    seed_stocks()
+    seed_portfolios()
+    seed_watchlists()
+    seed_portfolio_snaps()
     seed_fills()
-    # seed_news()
-    # seed_portfolio_snaps()
 
 
 
@@ -31,11 +31,11 @@ def seed():
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
-    # undo_users()
-    # undo_stocks()
-    # undo_banks()
-    # undo_portfolios()
-    # undo_watchlists()
     undo_fills()
-    # undo_news()
-    # undo_portfolio_snaps()
+    undo_portfolio_snaps()
+    undo_watchlists()
+    undo_portfolios()
+    undo_stocks()
+    undo_news()
+    undo_users()
+    undo_banks()

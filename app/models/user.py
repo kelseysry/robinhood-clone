@@ -1,7 +1,6 @@
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from sqlalchemy.orm import relationship
 
 # UserMixin allows us to use user auth on user model
 # werkzeug.security  debugger and hash password

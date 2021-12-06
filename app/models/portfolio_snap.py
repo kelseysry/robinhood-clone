@@ -1,5 +1,4 @@
 from .db import db
-from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
 class Portfolio_Snap(db.Model):

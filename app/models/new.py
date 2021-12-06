@@ -1,5 +1,4 @@
 from .db import db
-from sqlalchemy.orm import relationship
 
 class News(db.Model):
   __tablename__ = "news"
@@ -10,4 +9,3 @@ class News(db.Model):
   description = db.Column(db.Text, nullable=False)
   image_url = db.Column(db.String, nullable=False)
   date_published = db.Column(db.String, nullable=False)
-
