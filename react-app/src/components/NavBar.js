@@ -27,6 +27,11 @@ const NavBar = () => {
             Users
           </NavLink>
         </li>
+        {/* <li>
+          <NavLink to='/stocks/:ticker' exact={true} activeClassName='active'>
+            Tesla
+          </NavLink>
+        </li> */}
         <li>
           <LogoutButton />
         </li>
