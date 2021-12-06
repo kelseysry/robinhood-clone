@@ -13,4 +13,5 @@ class Portfolio(db.Model):
 
   fills = db.relationship("Fill", back_populates="portfolio")
 
-  
+  # 1 portfolio will have many snapshots
+  portfolio_snaps = db.relationship("Portfolio_Snap", back_populates="portfolio")

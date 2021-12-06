@@ -6,3 +6,4 @@ from .portfolio import Portfolio
 from .fill import Fill
 from .new import News
 from .watch_list import WatchList
+from .portfolio_snap import Portfolio_Snap

@@ -33,3 +33,4 @@ class Stock(db.Model):
 
   # stock's price when fill 1 order
   # fill_order = db.relationship("Fill", back_populates="stock_price")
+  

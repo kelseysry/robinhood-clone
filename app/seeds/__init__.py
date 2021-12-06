@@ -6,6 +6,7 @@ from .portfolios import seed_portfolios, undo_portfolios
 from .fills import seed_fills, undo_fills
 from .news import seed_news, undo_news
 from .watch_lists import seed_watchlists, undo_watchlists
+from .portfolio_snaps import seed_portfolio_snaps, undo_portfolio_snaps
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -19,9 +20,10 @@ def seed():
     # seed_stocks()
     # seed_banks()
     # seed_portfolios()
-    seed_watchlists()
+    # seed_watchlists()
     # seed_fills()
     # seed_news()
+    seed_portfolio_snaps()
 
 
 
@@ -32,7 +34,8 @@ def undo():
     # undo_users()
     # undo_stocks()
     # undo_banks()
-    undo_portfolios()
-    undo_watchlists()
-    undo_fills()
+    # undo_portfolios()
+    # undo_watchlists()
+    # undo_fills()
     # undo_news()
+    undo_portfolio_snaps()
