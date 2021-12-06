@@ -1,5 +1,4 @@
 from .db import db
-from sqlalchemy.orm import relationship
 
 
 class Bank(db.Model):
