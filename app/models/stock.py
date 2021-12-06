@@ -33,4 +33,28 @@ class Stock(db.Model):
 
   # stock's price when fill 1 order
   # fill_order = db.relationship("Fill", back_populates="stock_price")
-  
+
+
+  def to_dict(self):
+      return {
+          'id': self.id,
+          'name': self.name,
+          'ticker': self.ticker,
+          'about': self.about,
+          'ceo': self.ceo,
+          'employee_count': self.employee_count,
+          'headquarters': self.headquarters,
+          'founded': self.founded,
+          'market_cap': self.market_cap,
+          'price_earnings_ratio':self.price_earnings_ratio,
+          'dividend_yield':self.dividend_yield,
+          'average_volume':self.average_volume,
+          'high_today':self.high_today,
+          'low_today':self.low_today,
+          'open_price':self.open_price,
+          'volume':self.volume,
+          'week52_high':self.week52_high,
+          'week52_low':self.week52_low,
+          'news_id':self.news_id,
+          'market_price':self.market_price
+      }
