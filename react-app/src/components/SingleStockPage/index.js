@@ -26,9 +26,10 @@ function SingleStockPage() {
   console.log("stock obj", stock)
   return (
     <>
-    <div>  stock name: {stock[0].stock.name} </div>
-    <div>  stock about: {stock[0].stock.about} </div>
-    <div>  stock ceo: {stock[0].stock.ceo} </div>
+    <div>  stock name: {stock[0]?.name} </div>
+    <div>  stock about: {stock[0]?.about} </div>
+    <div>  stock ceo: {stock[0]?.ceo} </div>
+    {/* <div>  stock ceo: {stock[0].stock.ceo} </div> */}
     </>
   )
 }
